@@ -53,6 +53,11 @@ const Detial = ({BackButton}) => {
                         <Option value={20}>my-list</Option>
                         <Option value={25}>her-list</Option>
                     </Select>
+                    <div className="py-4 flex items-center justify-between">
+                        <hr className="w-[45%] border-[#d9d9d9]" />
+                        <span className="text-[#3b4056] font-medium">or</span>
+                        <hr className="w-[45%] border-[#d9d9d9]" />
+                    </div>
 
             </div>
             <div className="my-shadow fixed right-6 top-23 w-[20%]">
