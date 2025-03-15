@@ -6,9 +6,14 @@ const { Option } = Select;
 
 const Detial = ({BackButton}) => {
     const [pageSize, setPageSize] = useState(10);
+    const [fileName, setFileName] = useState(10);
     
     const handleChange = (value) => {
         setPageSize(value);
+        if (onChange) onChange(value);
+    };
+    const handleFileNameChange = (value) => {
+        setFileName(value);
         if (onChange) onChange(value);
     };
 
@@ -29,11 +34,24 @@ const Detial = ({BackButton}) => {
                         onChange={handleChange}
                         style={{ width: "100%" }}
                         dropdownStyle={{ minWidth: 60 }}
-                        className=''
+                        className='!mb-4'
                     >
                         <Option value={10} disabled>select-account</Option>
                         <Option value={20}>Purfull, +919098789098</Option>
                         <Option value={25}>Madgix, +918890987656</Option>
+                    </Select>
+
+                    <div className="heading-2 mb-2">Select Contact List</div>
+                    <Select
+                        value={fileName}
+                        onChange={handleFileNameChange}
+                        style={{ width: "100%" }}
+                        dropdownStyle={{ minWidth: 60 }}
+                        className=''
+                    >
+                        <Option value={10} disabled>select-file</Option>
+                        <Option value={20}>my-list</Option>
+                        <Option value={25}>her-list</Option>
                     </Select>
 
             </div>
