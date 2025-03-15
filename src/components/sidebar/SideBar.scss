@@ -1,0 +1,80 @@
+.side-nav-bar-container {
+    position: fixed;
+    height: 100svh;
+    width: 20%;
+    .ant-menu{
+        
+        padding: "20px auto" !important;
+    }
+    .ant-menu-inline {
+        width: 100% !important;
+    }
+    .ant-menu-submenu-title {
+        margin: 0;
+        width: 100%;
+    }
+    .ant-menu-item, .ant-menu-submenu span{
+        font-size: 0.9375rem;
+        font-weight: 400;        
+        letter-spacing: .15px;
+        min-height: 38px;
+        color: var(--primary-text-color) ;
+
+    }
+    .ant-menu-submenu-arrow{
+        color: var(--primary-text-color) ;
+
+    }
+    .ant-menu-submenu, .ant-menu-item{
+        margin: auto;
+    }
+    .ant-menu-submenu > ul{
+        background-color: inherit !important;
+        list-style: disc !important;
+    }
+    .ant-menu-submenu-arrow {
+        transform: rotate(-90deg); 
+      }
+      
+      .ant-menu-item-icon {
+        font-size: 12px;
+        font-weight: bolder !important;
+      }
+      .ant-menu-submenu-open .ant-menu-submenu-arrow{
+        transform: rotate(-180deg) !important; 
+        color: #6200ed !important;
+      }
+      .ant-menu-submenu-open  .ant-menu-item-icon{
+        color: #6200ed !important;
+      }
+    .side-nav-logo-container {
+        width: 95%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.5rem;
+        font-weight: 600;
+        height: 10vh !important;
+    }
+    .ant-menu-submenu-selected .ant-menu-item-icon, .ant-menu-submenu-selected .ant-menu-submenu-arrow{
+        color: #6200ed !important; 
+    }
+    .ant-menu-item-selected {
+        color: #fff !important;
+    }
+    .menu-bar .ant-menu-item-selected {
+        color: #fff !important;
+        background-color: #6200ed; 
+    }
+    .menu-bar .ant-menu-item-selected .ant-menu-title-content{
+        color: #fff !important;
+        background-color: #6200ed; 
+    }
+    .ant-menu-item, .ant-menu-submenu{
+        width: 90%;
+        margin: 8px auto;
+
+    }
+}

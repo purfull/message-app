@@ -1,0 +1,53 @@
+.top-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 10px 24px;
+    width: 80%;
+    position: fixed;
+    right: 0;
+    background-color: var(--body-color);
+
+    .search-bar-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        cursor: pointer;
+        height: 100%;
+        width: 20%;
+
+        .searchText {
+            color: #a8aab4;
+        }
+    }
+
+    .brand-logo {
+        color: #666cff;
+        height: 50px;
+        width: 50px;
+    }
+
+    .avatar-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .avatar-badge {
+            .ant-badge-color-green {
+                bottom: 0 !important;
+                right: 6px;
+                top: auto !important;
+            }
+        }
+
+        .avatar-dropdown {
+            .ant-dropdown-menu {
+                width: 400px !important;
+                padding: 20px;
+
+            }
+
+        }
+    }
+}
