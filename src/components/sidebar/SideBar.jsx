@@ -11,19 +11,30 @@ const SideNavBar = () => {
     const items = [
         // { key: '0', icon: <span style={{color: "#666cff"}}><BrandLogo /></span>, label: <div style={{fontWeight: '700'}}>Purfull</div> },
         { key: '1', icon: <PieChartOutlined />, label: <Link to="/dashboard/reports">dashboard</Link>  },
-        { key: '2', 
+        { key: '2', icon: <ContainerOutlined />, label: "Template",
+            children: [
+              { key: "2-1", label: <Link to="/dashboard/new-template">Add Template</Link> },
+              { key: "2-2", label: <Link to="/dashboard/my-template">My Template</Link> },
+            //   { key: "2-2", label: "Account Management" },
+            //   { key: "2-3", label: "Preferences" },
+            ],  },
+        { key: '3', 
             icon: <DesktopOutlined />, 
             label: "Channels",
             children: [
-              { key: "2-1", label: <Link to="/dashboard/contact">Whatsapp</Link> },
+              { key: "3-1", label: <Link to="/dashboard/contact">Whatsapp</Link> },
             //   { key: "2-2", label: "Account Management" },
             //   { key: "2-3", label: "Preferences" },
             ], },
-        { key: '3', icon: <ContainerOutlined />, label: <Link to="/dashboard/contact">chat</Link> },
         {
           key: "4",
           icon: <AppstoreOutlined />,
-          label: "Settings"
+          label: <Link to="/dashboard/settings">settings</Link>
+        },
+        {
+          key: "5",
+          icon: <AppstoreOutlined />,
+          label: <Link to="/dashboard/settings">Support</Link>
         },
     ];
 

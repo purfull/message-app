@@ -1,31 +1,36 @@
 import { Table } from "antd";
 import CustomTable from "../../../components/table/Table";
 import Detial from "../detail-page/Detail";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Template from "../template/Template";
 
-const Contact = () => {
+const TemplateMainPage = () => {
     const [newPage, setNewPage] = useState(false)
     // Define columns
+    useEffect(() => {
+        console.log(newPage);
+        
+    },[newPage])
     const columns = [
         {
-            title: "Name",
+            title: "template name",
             dataIndex: "name",
             key: "name",
         },
         {
-            title: "Email",
-            dataIndex: "email",
-            key: "email",
+            title: "status",
+            dataIndex: "status",
+            key: "status",
         },
         {
-            title: "Phone",
-            dataIndex: "phone",
-            key: "phone",
+            title: "last updated",
+            dataIndex: "last updated",
+            key: "last updated",
         },
         {
-            title: "Message",
-            dataIndex: "message",
-            key: "message",
+            title: "action",
+            dataIndex: "action",
+            key: "action",
         },
     ];
 
@@ -154,7 +159,7 @@ const Contact = () => {
             {/* <h1 className="text-xl font-semibold mb-4">Contact Us</h1> */}
             
             {newPage ?
-                <Detial 
+                <Template 
                     BackButton={handleBack}
                 /> : 
                 <CustomTable 
@@ -169,4 +174,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default TemplateMainPage;
